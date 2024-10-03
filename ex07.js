@@ -3,5 +3,10 @@
 // (e.g., the presence of "@" and a ".").
 // Example: validateEmail("test@example.com") should return true.
 
+const validateEmail = (email) => {
+  const regex = /^[\W\D]+@[\W\D]+.[\W\D]{3,}$/;
+  return !!email.match(regex);
+};
+
 console.log(validateEmail("test@example.com")); // Expected output: true
 console.log(validateEmail("invalid-email.com")); // Expected output: false
